@@ -1,0 +1,13 @@
+<nav class="d-flex flex-column flex-md-row align-items-center shadow-sm site-header sticky-top text-white">
+  <div class="container d-flex flex-row justify-content-between">
+    <a class="py-2" routerLink="/">
+      <img src="assets/images/logo.svg" class="logo" alt="">
+    </a>
+    <ng-container *ngIf="isAuthenticated$ as auth">
+    <span class="uppercase-font profile" *ngIf="profile$ | async as profile">
+      {{profile.firstName}} {{profile.lastName}}
+      <span class="mdi mdi-logout-variant icon-size" (click)="logout()"></span>
+    </span>
+    </ng-container>
+  </div>
+</nav>

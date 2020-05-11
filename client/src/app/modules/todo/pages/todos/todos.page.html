@@ -1,0 +1,70 @@
+<app-layout>
+  <div class="row mt-3 w-100">
+    <div class="col ">
+
+      <div class="card">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs float-left">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/todo/all" routerLinkActive="active"
+                 [routerLinkActiveOptions]="{exact: true}">დავალებები</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/todo/my" routerLinkActive="active"
+                 [routerLinkActiveOptions]="{exact: true}">ჩემი დავალებები</a>
+            </li>
+          </ul>
+          <button class="btn btn-primary float-right" (click)="openTodoModal()">
+            <span class="mdi mdi-plus-thick"></span>
+          </button>
+        </div>
+        <div class="card-body pt-3">
+          <ng-container *ngIf="todos$ | async as todos">
+            <ng-container *ngIf="todos.length; else noTodo">
+              <div class="card mb-2" *ngFor="let todo of todos" [ngClass]="{'border-success': todo.status === 'DONE'}">
+                <div class="card-header">
+                  {{todo.name}}
+                  <button class="btn btn-success float-right ml-2 todo-action-button" *ngIf="todo.status === 'TODO'"
+                          (click)="openModal(template, todo)"><span class="mdi mdi-check-circle"></span>
+                  </button>
+                  <button class="btn btn-info float-right ml-2 todo-action-button" *ngIf="todo.status === 'TODO'"
+                          (click)="openTodoModal(true, todo)">
+                    <span class="mdi mdi-square-edit-outline"></span>
+
+                  </button>
+                </div>
+                <div class="card-body">
+                  <div class="card-title row">
+                    <span class="col">შექმნა: {{todo.createdBy.firstName}} {{todo.createdBy.lastName}}</span>
+                    <span class="col"
+                          *ngIf="todo.assigned">შემსრულებელი: {{todo.assigned.firstName}} {{todo.assigned.lastName}} </span>
+                    <span class="col">შესრულების ვადა: {{todo.dueDate | date: 'dd/MM/yyyy'}}</span>
+                  </div>
+                  <hr class="divider">
+                  <p class="card-text" [innerHTML]="todo.description"></p>
+                </div>
+              </div>
+              <ng-template #template>
+                <div class="modal-body text-center">
+                  <p>ნამდვილად გსურთ შესრულება?</p>
+                  <button type="button" class="btn btn-danger m-2" (click)="decline()">არა</button>
+                  <button type="button" class="btn btn-primary m-2" (click)="confirm()">კი</button>
+                </div>
+              </ng-template>
+            </ng-container>
+            <ng-template #noTodo>
+              <div class="card text-center">
+                <div class="card-body">
+                  <p class="card-text">დავალება არ მოიძებნა</p>
+                  <button class="btn btn-primary" (click)="openTodoModal()">დაამატე დავალება</button>
+                </div>
+              </div>
+            </ng-template>
+
+          </ng-container>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</app-layout>

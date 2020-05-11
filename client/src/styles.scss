@@ -1,0 +1,33 @@
+@import "assets/scss/variables";
+@import "~bootstrap/scss/bootstrap";
+
+body, html {
+  font-family: $lowercase-font;
+}
+
+.uppercase-font {
+  font-family: $uppercase-font;
+}
+
+.lowercase-font {
+  font-family: $lowercase-font;
+}
+
+
+.btn {
+  line-height: 1;
+  font-family: $uppercase-font;
+  font-size: 14px;
+}
+
+form {
+  label {
+    font-size: 13px;
+    font-family: $uppercase-font;
+  }
+}
+
+
+.theme-blue .bs-datepicker-head {
+  background-color: #22a6b3 !important;
+}

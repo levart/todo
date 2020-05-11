@@ -1,0 +1,32 @@
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+
+  a {
+    color: #999;
+    transition: ease-in-out color .15s;
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .profile{
+    display: inline-block;
+    margin: 7px;
+  }
+
+  .icon-size {
+    font-size: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+}
+

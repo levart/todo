@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9340682b-25a7-454e-ba4f-4baa17b548aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/config/config.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/config/swagger.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/core/exception-filter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/auth.controller.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/auth.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/auth.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/auth.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/dtos/LoginPayload.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/dtos/TokenPayload.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/dtos/UserLogin.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/dtos/register.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/jwt-strategy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/jwt.constants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/auth/token.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/todo/dtos/mytask.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/todo/dtos/todo.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/todo/todo.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/todo/todo.enum.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/todo/todo.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/todo/todo.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/todo/todo.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/user/user.controller.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/user/user.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/user/user.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/user/user.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/user/user.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/user/user.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/modules/user/user.service.ts" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/server" />
+  </component>
+  <component name="ProjectId" id="1biJwf7kjch9YAiTeK7zZgNOc99" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="D:\nestjs\todo\node_modules\prettier" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9340682b-25a7-454e-ba4f-4baa17b548aa" name="Default Changelist" comment="" />
+      <created>1589109221476</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589109221476</updated>
+      <workItem from="1589109232693" duration="10000" />
+    </task>
+    <servers />
+  </component>
+</project>

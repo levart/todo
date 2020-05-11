@@ -1,0 +1,71 @@
+<app-auth-layout>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstName">სახელი</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        formControlName="firstName"
+        placeholder="მიუთითეთ სახელი"
+        [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+      >
+      <small class="form-text text-danger" *ngIf="submitted && f.firstName.hasError('required')">
+        სახელის მითითება სავალდებულოა
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="lastName">გვარი</label>
+      <input type="text"
+             class="form-control"
+             id="lastName"
+             placeholder="გვარი"
+             formControlName="lastName"
+             [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"
+      >
+      <small class="form-text text-danger" *ngIf="submitted && f.lastName.hasError('required')">
+        გვარის მითითება სავალდებულოა
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="email">ელ.ფოსტა</label>
+      <input type="email" class="form-control" id="email"
+             placeholder="მიუთითეთ ელ.ფოსტა"
+             formControlName="email"
+             [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+      >
+      <small class="form-text text-danger" *ngIf="submitted && f.email.hasError('required')">
+        ელ.ფოსტის მითითება სავალდებულოა
+      </small>
+      <small class="form-text text-danger" *ngIf="submitted && f.email.hasError('email')">
+        ელ.ფოსტის ფორმატი არასწორია
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="password">პაროლი</label>
+      <input type="password" class="form-control" id="password"
+             formControlName="password"
+             placeholder="პაროლი"
+             [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+      >
+      <small class="form-text text-danger" *ngIf="submitted && f.password.hasError('required')">
+        პაროლის მითითება სავალდებულოა
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="repeatedPassword">გაიმეორეთ პაროლი</label>
+      <input type="password" class="form-control" id="repeatedPassword" formControlName="repeatedPassword"
+             placeholder="გაიმეორეთ პაროლი"
+             [ngClass]="{ 'is-invalid': submitted && f.repeatedPassword.errors }"
+      >
+      <small class="form-text text-danger" *ngIf="submitted && f.repeatedPassword.hasError('required')">
+        განმეორებითი პაროლის მითითება სავალდებულოა
+      </small>
+      <small class="form-text text-danger" *ngIf="submitted && f.repeatedPassword.hasError('passwordNotMatch')">
+        განმეორებითი პაროლის არ ემთხვევა პაროლის
+      </small>
+    </div>
+    <a routerLink="/auth">შესვლა</a>
+    <button type="submit" class="btn btn-primary float-right">რეგისტრაცია</button>
+  </form>
+</app-auth-layout>

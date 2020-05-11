@@ -1,0 +1,12 @@
+@import "fonts";
+
+$uppercase-font: "BPG_Nino_Medium_Caps", sans-serif;
+$lowercase-font: "BPG_Nino_Mkhedruli", sans-serif;
+
+
+// Your variable overrides
+$body-bg: #fafafa;
+$body-color: #505050;
+$theme-colors: (
+  primary: #22a6b3,
+);

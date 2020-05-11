@@ -1,0 +1,14 @@
+.card-body {
+  padding-top: 0;
+  .card-title {
+    margin: 0.3rem 0;
+  }
+
+  hr.divider {
+    margin-top: 0;
+  }
+  .todo-action-button {
+    padding: 0.1rem;
+    font-size: 20px;
+  }
+}
