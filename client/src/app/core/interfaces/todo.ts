@@ -15,7 +15,7 @@ export interface ITodo {
 export interface ITodoRequest {
   createdByMe?: boolean;
   myTodo?: boolean;
-  status?: 'TODO' | 'DONE';
+  status?: 'TODO' | 'DONE' | 'ALL';
 }
 
 

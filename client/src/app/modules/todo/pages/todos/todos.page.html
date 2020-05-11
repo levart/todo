@@ -19,8 +19,22 @@
           </button>
         </div>
         <div class="card-body pt-3">
+
           <ng-container *ngIf="todos$ | async as todos">
+            <button type="button" class="btn btn-default m-2" [ngClass]="{'btn-primary': todoStatus === 'ALL'}"
+                    (click)="changeStatus('ALL')">
+              ყველა <span class="badge badge-light">{{todos.length}}</span>
+            </button>
+            <button type="button" class="btn btn-default m-2" [ngClass]="{'btn-primary': todoStatus === 'TODO'}"
+                    (click)="changeStatus('TODO')">
+              შესასრულებელი <span class="badge badge-light">{{getByStatus(todos, 'TODO')}}</span>
+            </button>
+            <button type="button" class="btn btn-default m-2" [ngClass]="{'btn-primary': todoStatus === 'DONE'}"
+                    (click)="changeStatus('DONE')">
+              შესრულებული <span class="badge badge-light">{{getByStatus(todos, 'DONE')}}</span>
+            </button>
             <ng-container *ngIf="todos.length; else noTodo">
+
               <div class="card mb-2" *ngFor="let todo of todos" [ngClass]="{'border-success': todo.status === 'DONE'}">
                 <div class="card-header">
                   {{todo.name}}

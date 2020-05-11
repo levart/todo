@@ -20,6 +20,7 @@ export class TodosPage implements OnInit {
   createdByMe = false;
   myTodo = true;
   deleteTodo;
+  todoStatus: 'TODO' | 'DONE' | 'ALL' = 'ALL';
 
   constructor(
     private modalService: BsModalService,
@@ -53,6 +54,9 @@ export class TodosPage implements OnInit {
       createdByMe: this.createdByMe,
       myTodo: this.myTodo
     };
+    if(this.todoStatus !== 'ALL') {
+      params.status = this.todoStatus;
+    }
     this.todos$ = this.todoService.getTodos(params);
   }
 
@@ -93,5 +97,14 @@ export class TodosPage implements OnInit {
   decline(): void {
     this.deleteTodo = null;
     this.bsModalRef.hide();
+  }
+
+  getByStatus(todos: ITodo[], status: string) {
+    return todos.filter(f => f.status === status).length;
+  }
+
+  changeStatus(status: 'TODO' | 'DONE' | 'ALL') {
+    this.todoStatus = status;
+    this.getTodos();
   }
 }
