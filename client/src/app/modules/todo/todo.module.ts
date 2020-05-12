@@ -6,8 +6,8 @@ import {SharedModule} from '../../shared/shared.module';
 import {TodosPage} from './pages/todos/todos.page';
 import {TodoModalComponent} from './components/todo-modal/todo-modal.component';
 import {ModalModule} from 'ngx-bootstrap/modal';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-import {FroalaEditorModule} from 'angular-froala-wysiwyg';
+import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
+import {QuillModule} from 'ngx-quill';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import {FroalaEditorModule} from 'angular-froala-wysiwyg';
     SharedModule,
     ModalModule.forChild(),
     BsDatepickerModule,
-    FroalaEditorModule
+    QuillModule.forRoot()
   ]
 })
 export class TodoModule {

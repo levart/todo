@@ -21,13 +21,14 @@
 
     <div class="form-group">
       <label for="description">დავალების აღწერა</label>
-      <textarea
-        class="form-control"
-        formControlName="description"
-        id="description" rows="15"
-        [froalaEditor]="{charCounterCount: true}"
-        [ngClass]="{ 'is-invalid': submitted && f.description.errors }"
-      ></textarea>
+      <quill-editor  id="description" formControlName="description" [styles]="{height: '200px'}" [ngClass]="{ 'is-invalid': submitted && f.description.errors }"></quill-editor>
+<!--      <textarea-->
+<!--        class="form-control"-->
+<!--        formControlName="description"-->
+<!--        id="description" rows="15"-->
+<!--        [froalaEditor]="{charCounterCount: true}"-->
+<!--        [ngClass]="{ 'is-invalid': submitted && f.description.errors }"-->
+<!--      ></textarea>-->
       <small class="form-text text-danger" *ngIf="submitted && f.description.hasError('required')">
         დავალების აღწერა მითითება სავალდებულოა
       </small>
