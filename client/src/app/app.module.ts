@@ -19,12 +19,15 @@ import {ModalModule} from 'ngx-bootstrap/modal';
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 import {TokenInterceptor} from './core/interceptors/token.interceptor';
 import {HttpErrorInterceptor} from './core/interceptors/http-error.interceptor';
+import {LoaderComponent} from './core/loader/loader.component';
+import {LoaderInterceptorService} from './core/loader/loader.interceptor';
 
 defineLocale('ka', kaLocale);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,11 @@ defineLocale('ka', kaLocale);
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpErrorInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptorService,
       multi: true
     }
   ],
