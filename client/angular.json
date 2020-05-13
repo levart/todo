@@ -31,9 +31,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "node_modules/ngx-toastr/toastr.css",
-              "src/styles.scss",
-              "node_modules/froala-editor/css/froala_editor.pkgd.min.css",
-              "node_modules/froala-editor/css/froala_style.min.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
