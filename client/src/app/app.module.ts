@@ -13,7 +13,6 @@ import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
 import {NgxsStoragePluginModule, StorageOption} from '@ngxs/storage-plugin';
 import {NgxsRouterPluginModule} from '@ngxs/router-plugin';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';
 import {defineLocale} from 'ngx-bootstrap/chronos';
 import {kaLocale} from 'ngx-bootstrap/locale';
 import {ModalModule} from 'ngx-bootstrap/modal';
@@ -47,8 +46,6 @@ defineLocale('ka', kaLocale);
     NgxsRouterPluginModule.forRoot(),
     ModalModule.forRoot(),
     BsDatepickerModule.forRoot(),
-    FroalaEditorModule.forRoot(),
-    FroalaViewModule.forRoot()
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true},
